@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/24a476b79d.js" crossorigin="anonymous"></script>
+    <title>WEB DEVELOPMENT COURSE BY CODESEFOD</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">CODESEFOD</a>
+        <ul class="navigation">
+            <h2 style="color: white;"> Easy To Crack Exam || NOTES </h2>
+
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="search" name="" id="">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="content">
+            <h2>ADVANCED COMPUTER SYSTEM ARCHITECTURE</h2>
+            <h3>Question:1 - What is an Instruction Pipeline Design?</h3>
+            <h3>Answer :-</h3>
+            <h4>Instruction pipelining is a technique used in the design of modern microprocessors,
+                microcontrollers and CPUs to increase their instruction throughput (the number of instructions that can
+                be executed in a unit of time).</h4>
+            <h4>Pipelining is an speed up technique where multiple instructions are overlapped in execution on a
+                processor. It is an important topic in Computer Architecture.
+                This slide try to relate the problem with real life scenario for easily understanding the concept and
+                show the major inner mechanism.</h4>
+            <h4>The term pipeline refers to the fact that each step is carrying a single microinstruction (like a drop
+                of water), and each step is linked to another step (analogy; similar to water pipes).</h4>
+            <br>
+            <h3>Question:2 - What is Advantages and Disadvantages of Pipelining?</h3>
+            <h3>Answer :-</h3>
+            <h3>Advantages of Pipelining</h3>
+            <h4>1. If pipelining is used, the CPU Arithmetic logic unit can be designed faster, but will be more
+                complex. <br>
+                2. Pipelining in theory increases performance over an un-pipelined core by a factor of the number of
+                stages (assuming the clock frequency also increases by the same factor) and the code is ideal for
+                pipeline execution.<br>
+                3. Pipelined CPUs generally work at a higher clock frequency than the RAM clock frequency, (as of 2008
+                technologies, RAMs work at a low frequencies compared to CPUs frequencies) increasing computers overall
+                performance.
+            </h4>
+            <h3>Disadvantages of Pipelining</h3>
+            <h4>1. The design of a non-pipelined processor is simpler and cheaper to manufacture, non-pipelined
+                processor executes only a single instruction at a time. This prevents branch delays (in Pipelining,
+                every branch is delayed) as well as problems when serial instructions being executed concurrently.<br>
+                2. In pipelined processor, insertion of flip flops between modules increases the instruction latency
+                compared to a non-pipelining processor.<br>
+                3. A non-pipelined processor will have a defined instruction throughput. The performance of a pipelined
+                processor is much harder to predict and may vary widely for different programs.
+            </h4>
+            <br>
+            <h3>Question:3 - Define NUMA.</h3>
+            <h3>Answer :-</h3>
+            <h4>(Non-Uniform Memory Access) A multiprocessing architecture in which memory is separated into close and
+                distant banks. NUMA is similar to SMP, in which multiple CPUs share a single memory. However, in SMP,
+                all CPUs access a common memory at the same speed. In NUMA, memory on the same processor board as the
+                CPU (local memory) is accessed faster than memory on other processor boards (shared memory), hence the
+                "non-uniform" nomenclature. As a result, NUMA architecture scales much better to higher numbers of CPUs
+                than SMP. "Cache coherent NUMA" means that caching is supported in the local system.
+                <p>In non-uniform Memory Access, memory access time is not equal.</p>
+                <p>In Non-uniform Memory Access, Different memory controller is used.</p>
+            </h4>
+            <img src="img198.png" alt="" id="rv">
+            <br>
+            &nbsp;
+            <h3>Question:4 - Define COMA.</h3>
+            <h3>Answer :-</h3>
+            <h4>
+                COMA stands for Cache-only memory access machines. A COMA machine includes several processing nodes
+                connected by an interconnection network. Each processing node has a high-implementation processor, a
+                cache, and an allocation of the global shared memory.
+            </h4>
+            &nbsp;
+            <img src="img197.png" alt="" id="rv">
+            <p>coma shared memory figure..</p>
+
+            &nbsp;
+
+            <h3>Question:5 - Explain non linear pipeline processor.</h3>
+            <h3>Answer :-</h3>
+            <h4>
+                Non-Linear pipeline is a pipeline which is made of different pipelines that are present at different
+                stages. The different pipelines are connected to perform multiple functions. It also has feedback and
+                feed-forward connections. It is made such that it performs various function at different time
+                intervals.<br>
+
+                Non-Linear pipelines are dynamic pipelines because they can be reconstructed to implement variable
+                functions multiple times.<br>
+                The non-Linear pipeline enables feed-forward and feedback connections additionally to the streamlined
+                connection.<br>
+                The Output of the pipeline is not necessarily produced from the last stage.<br>
+                Dynamic pipelining is specified by more than one Reservation table.
+
+            </h4>
+            &nbsp;
+            <img src="img199.png" alt="" id="rv">
+            <p>Non-linear pipeline daigram.</p>
+            &nbsp;
+
+            <h3>Question:6 - Explain non linear pipeline processor.</h3>
+            <h3>Answer :-</h3>
+            <h4>
+                A reservation table is a way of representing the task flow pattern of a pipelined sytem. A reservation
+                table has several rows and columns. Each row of the reservation table represents one resource of the
+                pipeline and each column represents one time-slice of the pipeline.
+                <br>
+                For example, if in a pipelined system, there are four resources and five time-slices, then, the
+                reservation table will have four rows and five columns. All the elements of the table are either 0 or 1.
+                If one resource (say, resource i) is used in a time-slice (say time-slice j), then the (i,j)-th element
+                of the table will have the entry 1. On the other hand, if a resource is not used in a particular
+                time-slice, then that entry of the table will have the value 0.
+                <br>
+            </h4>
+            &nbsp;
+
+            <h3>Question:7 - What is Data Hazards?</h3>
+            <h3>Answer :-</h3>
+            <h4>
+                Data hazards occur when instructions that exhibit data dependence modify data in different stages of a
+                pipeline. Ignoring potential data hazards can result in race conditions (also termed race hazards).
+                There are three situations in which a data hazard can occur:
+                <br>
+                1. read after write (RAW), a true dependency<br>
+                2. write after read (WAR), an anti-dependency<br>
+                3. write after write (WAW), an output dependency
+            </h4>
+            &nbsp;
+
+            <h3>Question:8 - What is Coherence</h3>
+            <h3>Answer :-</h3>
+            <h4>
+                Coherence defines the behavior of reads and writes to a single address location.
+            </h4>
+
+            <h3>Question:9 - What is Cache Coherence</h3>
+            <h3>Answer :-</h3>
+            <h4>
+                Cache coherence is the discipline that ensures that changes in the values of shared operands are
+                propagated throughout the system in a timely fashion.
+                <br>
+                There are three distinct level of cache coherence :-
+                <br>
+                1. Every write operation appears to occur instantaneously.<br>
+                2. All processors see exactly the same sequence of changes of values for each separate operand.<br>
+                3. Different processors may see an operation and assume different sequences of values; this is known as
+                non-coherent behavior.
+                <h4>
+                    Open this and read all about Cache cohernece.
+                </h4>
+                <p>Open a PDF file <a
+                    href="Cache.pdf">CLICK ME</a>.</p>
+            </h4>
+            &nbsp;
+
+            <h3>Question:10 - What is Parallel Programming Model?Explain it.</h3>
+            <h3>Answer :-</h3>
+            <h4>
+                Open this and read all about Parallel Programming Model .
+            </h4>
+            <p>Open a PDF file <a
+                    href="Para.pdf">CLICK ME</a>.</p>
+
+                    &nbsp;
+            <h3>Question:10 - Read More about pipelining.</h3>
+            <h3>Answer :-</h3>
+            <h4>
+                Open this and read all about pipelining .
+            </h4>
+            <p>Open a PDF file <a
+                    href="Pipeline.pdf">CLICK ME</a>.</p>
+             &nbsp;
+
+             <h3>Question:10 - Read More about Non-Linear Processors </h3>
+            <h3>Answer :-</h3>
+            <h4>
+                Open this and read all about Non-Linear Processors  .
+            </h4>
+            <p>Open a PDF file <a
+                    href="nonlinear.pdf">CLICK ME</a>.</p>
+             &nbsp;
+             <h3>Question:10 - Read More about Multithreading </h3>
+            <h3>Answer :-</h3>
+            <h4>
+                Open this and read all about Multithreading  .
+            </h4>
+            <p>Open a PDF file <a
+                    href="Multithreading.pdf">CLICK ME</a>.</p>
+             &nbsp;
+             <h3>Question:10 - Read More about Parallel Languages </h3>
+            <h3>Answer :-</h3>
+            <h4>
+                Open this and read all about Parallel Languages  .
+            </h4>
+            <p>Open a PDF file <a
+                    href="parlel.pdf">CLICK ME</a>.</p>
+             &nbsp;
+             <h3>Question:10 - Read More about Code Optimization </h3>
+            <h3>Answer :-</h3>
+            <h4>
+                Open this and read all about Code Optimization  .
+            </h4>
+            <p>Open a PDF file <a
+                    href="CodeOptimization.pdf">CLICK ME</a>.</p>
+             &nbsp;
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col">
+                <img src="cfs.png" alt="logo" class="logo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sed dolore in officiis velit
+                    autem
+                    similique id nihil quod repellat provident officia, eius eaque vero culpa temporibus placeat quia.
+                    Autem.</p>
+            </div>
+            <div class="col">
+                <h3>Office <div class="underline"><span></span></div>
+                </h3>
+                <p>Delhi Road</p>
+                <p>Whitefield, Greator Noida</p>
+                <p>Dlhi Area,PIN 247341</p>
+                <p class="email-id">owner@codesefod.com</p>
+                <h4>+91 9027437997</h4>
+            </div>
+            <div class="col">
+                <h3>Links <div class="underline"><span></span></div>
+                </h3>
+                <ul>
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>About Us</li>
+                    <li>Features</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Newsletter <div class="underline"><span></span></div>
+                </h3>
+                <form action="">
+                    <i class="far fa-envelope"></i>
+                    <input type="email" name="" id="" placeholder="Enter Your email id">
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-whatsapp"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">CodeSeFod IT Solutions &copy; 2021 -All Rights Reserved</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
